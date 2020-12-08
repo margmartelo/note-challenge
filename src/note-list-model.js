@@ -1,6 +1,6 @@
 'use strict'
 
-  class NoteListModel{ 
+  class NoteList{ 
    constructor() { 
      this.list = []; 
     } 
