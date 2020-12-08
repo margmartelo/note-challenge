@@ -10,7 +10,7 @@
     }
 
     seeingNotes() {
-      console.log(this.list);
+      return this.list[0].text;
     }
 
  };

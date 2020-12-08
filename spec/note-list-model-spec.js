@@ -8,3 +8,13 @@ function testListStoresNotes(text) {
 };
 
 testListStoresNotes("A new note");
+
+
+function testSeeingListOfNotes() {
+  var notelist = new NoteList;
+  var note = new Note("Hello!");
+  notelist.addingNotes(note);
+  assert.isTrue(notelist.seeingNotes() === "Hello!");
+};
+
+testSeeingListOfNotes();
