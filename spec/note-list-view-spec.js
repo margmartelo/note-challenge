@@ -1,16 +1,17 @@
-// 'use strict';
-//
-// function testNoteListView(notelist) {
-//   var notelist = new NoteList;
-//   var note = new Note(text);
-//   notelist.addingNotes(note);
-//   assert.isTrue(notelist.list.length === 1);
-// };
-//
-// testListStoresNotes("A new note");
-//
-//
-//
+'use strict';
+
+function testInstantiationwithNoteListModel() {
+  var noteList = new Notelist;
+  var noteListView = new NoteListView();
+  var note = new Note(text);
+  notelist.addingNotes(note);
+  assert.isTrue(notelist.list.length === 1);
+};
+
+testListStoresNotes("A new note");
+
+
+
 
 
 

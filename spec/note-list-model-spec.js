@@ -12,8 +12,7 @@ testListStoresNotes();
 
 function testSeeingListOfNotes() {
   var notelist = new NoteList;
-  var note = new Note("Hello!");
-  notelist.addingNotes(note);
+  notelist.addingNotes("Hello!");
   assert.isTrue(notelist.seeingNotes() === "Hello!");
 };
 

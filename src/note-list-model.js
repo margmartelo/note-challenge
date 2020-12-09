@@ -3,14 +3,16 @@
   class NoteList{ 
    constructor() { 
      this.list = []; 
+     this.array = [];
     } 
 
-    addingNotes(note) {
-      this.list.push(note)
+    addingNotes(text) {
+      this.list.push(new Note(text));
     }
 
     seeingNotes() {
-      return this.list[0].text;
+      for (var i = 0; i < this.list.length; i++) { 
+        this.array.push(this.list[i].text)         } 
+        return this.array.join()
     }
-
  };
