@@ -1,24 +1,28 @@
 'use strict';
 
 function testInstantiationwithNoteListModel() {
-  var noteList = new Notelist;
-  var noteListView = new NoteListView();
-  var note = new Note(text);
-  notelist.addingNotes(note);
-  assert.isTrue(notelist.list.length === 1);
+  var noteList = new NoteList;
+  var noteListView = new NoteListView(noteList);
+  assert.isTrue(noteListView.listView instanceof NoteList);
 };
 
-testListStoresNotes("A new note");
+testInstantiationwithNoteListModel();
+console.log("Takes a note list model upon instantiation.")
+
+function returnsHTMLOfNoteListModel() {
+  var noteListView = new NoteListView();
+  noteListView.listView.addingNotes("Mel")
+  noteListView.listView.addingNotes("Margarida")
+  assert.isTrue(noteListView.viewList() === "<ul><li><div>Mel</div></li><li><div>Margarida</div></li></ul>")
+};
+returnsHTMLOfNoteListModel();
+console.log("It returns HTML of Note List Model")
 
 
 
 
 
 
-// Code in a file called note-list-view.js.
-// Tests are wrapped in the module pattern.
-// Uses a Javascript class to define a note list view object that can be instantiated.
-// Takes a note list model upon instantiation.
 // Has a method that, when called, returns a string of HTML that represents the note list model.
 // For example: <ul><li><div>Favourite food: pesto</div></li><li><div>Favourite drink:
 // seltzer</div></li></ul>.

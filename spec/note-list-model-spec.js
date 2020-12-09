@@ -8,6 +8,7 @@ function testListStoresNotes() {
 };
 
 testListStoresNotes();
+console.log("It is storing the notes.")
 
 
 function testSeeingListOfNotes() {
@@ -17,3 +18,4 @@ function testSeeingListOfNotes() {
 };
 
 testSeeingListOfNotes();
+console.log("It allows us to see the notes stored.")
