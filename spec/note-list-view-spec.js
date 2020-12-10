@@ -11,12 +11,12 @@ console.log("Takes a note list model upon instantiation.")
 
 function returnsHTMLOfNoteListModel() {
   var noteListView = new NoteListView();
-  noteListView.listView.addingNotes("Mel")
-  noteListView.listView.addingNotes("Margarida")
-  assert.isTrue(noteListView.viewList() === "<ul><li><div>Mel</div></li><li><div>Margarida</div></li></ul>")
+  noteListView.listView.addingNotes("1234567891234567891234")
+  noteListView.listView.addingNotes("1234567891234567891267")
+  assert.isTrue(noteListView.viewList() === "<ul><li><div>12345678912345678912</div></li><li><div>12345678912345678912</div></li></ul>")
 };
 returnsHTMLOfNoteListModel();
-console.log("It returns HTML of Note List Model")
+console.log("It returns HTML of Note List Model with the 20 first characters of each note")
 
 
 
